@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:preferences_app/widgets/widgets.dart';
 
 class HomeScreen extends StatelessWidget {
   static const String routerName = 'Home';
@@ -6,8 +7,12 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      body: Center(
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Home'),
+      ),
+      drawer: const SideMenu(),
+      body: const Center(
         child: Text('HomeScreen'),
       ),
     );
